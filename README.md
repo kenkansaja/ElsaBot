@@ -1,44 +1,27 @@
+<p align="center">
+  <img src="https://telegra.ph/file/f973d5a6d4d91f6ca5aa3.jpg">
+</p>
 
+### ELSA BOT
+adalah Repo bot telegram untuk membuat bot pengelola managemen biar admin kagak capek
 
-# Daisy Based on Python Telegram Bot
-## OLD version of @DaisyXBot
-# 2 Branches available. this is main brach. swith advanced for all fetures
+<p align="center">
+  <a href="https://t.me/kenkanasw"><img src="https://img.shields.io/badge/OWNER-blue?style=for-the-badge&logo=telegram"/></a>
+</p>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kenkannih/managebot)
+<p align="center">
+  <a href="https://t.me/elsamanagerbot"><img src="https://img.shields.io/badge/ELSA BOT-yellow?style=for-the-badge&logo=telegram"/></a>
+</p>
 
+<details>
+  <summary>DEPLOY DI HEROKU !! </summary>
 
-## New version Avaiilable on Telegram as [@DaisyXBot](https://t.me/daisyxbot)
-## DaisyX-v2.0 is the latest
+```
+Fill in all the details, Deploy!
+Now go to https://dashboard.heroku.com/apps/(app-name)/resources ( Replace (app-name) with your app name )
+REMEMBER: Turn on worker dyno (Don't worry It's free :D) & Webhook
+Now send the bot /start, If it doesn't respond go to https://dashboard.heroku.com/apps/(app-name)/settings and remove webhook and port.
+```
 
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kenkannih/Elsa-Bot)
 
-
-
-## Credits
-
- - SaitamaRobot
- - MissJuliaRobot
- - SuzuyaProbot
- - Daisy
- - FridayUserbot
- - Uniborg
- - Telethon
- - Pyrogram
- - Skylee
- - emilia
-
-
-The bot is based on the original work done by [PaulSonOfLars](https://github.com/PaulSonOfLars)
-This repo was just revamped to suit an Anime-centric community. All original credits go to Paul and his dedication, Without his efforts, this fork would not have been possible!
-
-All other credits mentioned on top of scripts
-
-Should any be missing kindly let us know at [Daisy Support](https://t.me/DaisySupport_Official) or simply submit a pull request on the readme.
-
-## Daisy X the telegram Bot Project
-The Advanced Branch (For PRO's)
-
-DaisyX v1.0(advvanced)
-
-## Special Credits
-- [ImJanindu](https://github.com/imjanindu) - A Co-Developer of Project
-- [Kaviya-Admin](https://github.com/kaviya-admin) - A Co-Developer of Project
