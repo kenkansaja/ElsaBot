@@ -5,10 +5,9 @@
          "telegram",
          "anime",
          "group",
-         "manager",
-         "DaisyX"
+         "manager"
       ],   
-   "repository": "https://github.com/kenkannih/Managebot",
+   "repository": "https://github.com/kenkannih/ElsaBot",
    "addons": [
       {
          "options": {
@@ -179,6 +178,6 @@
       "manager",
       "daisy"
    ],
-   "name": "Daisy X",
-   "repository": "https://github.com/kenkannih/Managebot"
+   "name": "ElsaBot",
+   "repository": "https://github.com/kenkannih/ElsaBot"
 }
