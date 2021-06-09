@@ -90,7 +90,6 @@ buttons = [
 HELP_STRINGS = f"""
 *Main Commands :* HEY NGAB! GUA *{}*.
 GUA PUNYA BANYAK MODULE NIH, COBA LIAT KEBAWAH ADA PANDUANNYA KAN? NAH COBAIN AJA YA.
-
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /donate: You can support my creater using this command.
