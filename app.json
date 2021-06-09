@@ -1,5 +1,5 @@
 {
-      "name": "Daisy X",
+      "name": "Elsa",
       "description": "An Anime themed Telegram group management bot.",
       "keywords": [
          "telegram",
@@ -8,7 +8,7 @@
          "manager",
          "DaisyX"
       ],   
-   "repository": "https://github.com/Inukaasith/daisy-x",
+   "repository": "https://github.com/kenkannih/Managebot",
    "addons": [
       {
          "options": {
@@ -180,5 +180,5 @@
       "daisy"
    ],
    "name": "Daisy X",
-   "repository": "https://github.com/Inukaasith/daisy-x"
+   "repository": "https://github.com/kenkannih/Managebot"
 }
