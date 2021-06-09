@@ -72,16 +72,16 @@ RAWAT GROUP ELU, BIAR ELU NYA KAGAK CAPEK!
 
 buttons = [
     [
-        InlineKeyboardButton(text="OWNER", url="https://t.me/kenkanasw"),
-        InlineKeyboardButton(text="GROUP", url="https://t.me/musikkugroup"),
+        InlineKeyboardButton(text="👮OWNER👮", url="https://t.me/kenkanasw"),
+        InlineKeyboardButton(text="💬GROUP💬", url="https://t.me/musikkugroup"),
     ],
     [
         InlineKeyboardButton(text="❓ BANTUAN ❓", callback_data="help_back"),
-        InlineKeyboardButton(text="CHANNEL", url="https://t.me/musikkuchannel"),
+        InlineKeyboardButton(text="📣CHANNEL📣", url="https://t.me/musikkuchannel"),
     ],
     [
         InlineKeyboardButton(
-            text="💫 TAMBAHKAN 💫", url="t.me/{}?startgroup=true"
+            text="➕ TAMBAHKAN ➕", url="t.me/elsamanagerbot?startgroup=true"
         ),
     ],
 ]
@@ -92,7 +92,6 @@ HELP_STRINGS = f"""
 HEY NGAB! GUA GUA PUNYA BANYAK MODULE NIH, COBA LIAT KEBAWAH ADA PANDUANNYA KAN? NAH COBAIN AJA YA.
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
-✪ /donate: You can support my creater using this command.
 ✪ /settings: 
    ◔ in PM: will send you your settings for all supported modules.
    ◔ in a Group: will redirect you to pm, with all that chat's settings.
