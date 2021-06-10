@@ -88,17 +88,16 @@ buttons = [
 
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/f973d5a6d4d91f6ca5aa3.jpg)
+*Komen Utama :* [🤖](https://telegra.ph/file/f973d5a6d4d91f6ca5aa3.jpg)
 HEY NGAB! GUA GUA PUNYA BANYAK MODULE NIH, COBA LIAT KEBAWAH ADA PANDUANNYA KAN? NAH COBAIN AJA YA.
-✪ /start: Starts me! You've probably already used this.
-✪ /help: Click this, I'll let you know about myself!
+✪ /start: Memulai menggunakan saya.
+✪ /help: Klik ini akan memunculkan modul saya!
 ✪ /settings: 
-   ◔ in PM: will send you your settings for all supported modules.
-   ◔ in a Group: will redirect you to pm, with all that chat's settings.
-
+   ◔ di PM: akan mengirimkan setelan untuk semua modul yang didukung.
+   ◔ dalam grup: akan mengarahkan Kamu ke pm, dengan semua pengaturan chat.
 """.format(
     dispatcher.bot.first_name,
-    "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
+    "" if not ALLOW_EXCL else "\nUntuk dapat menggunakan semua modul gunakan / atau !.\n",
 )
 
 
@@ -128,7 +127,7 @@ for module_name in ALL_MODULES:
     if not imported_module.__mod_name__.lower() in IMPORTED:
         IMPORTED[imported_module.__mod_name__.lower()] = imported_module
     else:
-        raise Exception("Can't have two modules with the same name! Please change one")
+        raise Exception("Maaf tidak bisa memproses dua modul sekaligus! Tolong pilih hanya satu saja")
 
     if hasattr(imported_module, "__help__") and imported_module.__help__:
         HELPABLE[imported_module.__mod_name__.lower()] = imported_module
@@ -178,7 +177,7 @@ def test(update, context):
     except:
         pass
     update.effective_message.reply_text(
-        "Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN
+        "Hay kawan! _Saya_ *Bisa* `markdown`", parse_mode=ParseMode.MARKDOWN
     )
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
@@ -301,7 +300,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "*⚊❮❮❮❮ ｢  Help  for  {}  module 」❯❯❯❯⚊*\n".format(
+                "*⚊❮❮❮❮ ｢  BANTUAN UNTUK  {}  module 」❯❯❯❯⚊*\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -347,11 +346,11 @@ def help_button(update, context):
         context.bot.answer_callback_query(query.id)
         # query.message.delete()
     except Exception as excp:
-        if excp.message == "Message is not modified":
+        if excp.message == "Pesan tidak di modifikasi":
             pass
         elif excp.message == "Query_id_invalid":
             pass
-        elif excp.message == "Message can't be deleted":
+        elif excp.message == "Pesan tidak bisa di hapus":
             pass
         else:
             query.message.edit_text(excp.message)
@@ -363,20 +362,17 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by Infinity_Bots.* "
-            f"\n\n 🔥 Join [MUSIK KU GROUP](https://t.me/musikkugroup) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
-            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
+            text=f"*😍 Hi kembali!  Nam saya {dispatcher.bot.first_name} 😍 \n\nSaya adalah bot yang di kelola @kenkanasw.* "
+            f"\n\n 🔥 Join [MUSIK KU GROUP](https://t.me/musikkugroup) Untuk tahu kabar terbaru dari {dispatcher.bot.first_name} 🔥"
+            f"\n\n Saya memiliki sistem yang dapat mengatasi member yang suka spam, kamu tinggal aktifkan anti spam di pengaturan saya."
+            f"\n\n👇 Kamu bisa klik di bawah untuk cara penggunaan 👇",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="How To Use Me", callback_data="aboutmanu_howto"
-                        ),
-                        InlineKeyboardButton(
-                            text="T & C", callback_data="aboutmanu_tac"
+                            text="📑CARA PENGGUNAAN", callback_data="aboutmanu_howto"
                         ),
                     ],
                     [
@@ -384,7 +380,7 @@ def DaisyX_about_callback(update, context):
                             text="❔Help & Commands", callback_data="help_back"
                         )
                     ],
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
+                    [InlineKeyboardButton(text="◀️", callback_data="aboutmanu_back")],
                 ]
             ),
         )
@@ -414,7 +410,7 @@ def DaisyX_about_callback(update, context):
                             text="Anti Spam", callback_data="aboutmanu_spamprot"
                         ),
                     ],
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
+                    [InlineKeyboardButton(text="◀️", callback_data="aboutmanu_")],
                 ]
             ),
         )
@@ -425,18 +421,18 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="◀️", callback_data="aboutmanu_tac")]]
             ),
         )
 
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
             text=f"<b> ｢ Admin Permissions 」</b>"
-            f"\nTo avoid slowing down, {dispatcher.bot.first_name} caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), {dispatcher.bot.first_name} will only find out ~10 minutes later."
-            f"\n\nIF you want to update them immediately, you can use the /admincache command,thta'll force {dispatcher.bot.first_name} to check who the admins are again and their permissions"
-            f"\n\nIf you are getting a message saying:"
-            f"\n<Code>You must be this chat administrator to perform this action!</code>"
-            f"\nThis has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
+            f"\nUntuk menghindari perlambatan, {dispatcher.bot.first_name} menyimpan hak admin untuk setiap pengguna. Cache ini berlangsung sekitar 10 menit; ini dapat berubah di masa depan. Artinya, jika Anda mempromosikan pengguna secara manual (tanpa menggunakan perintah /promote), {dispatcher.bot.first_name} hanya akan mengetahuinya ~10 menit kemudian."
+            f"\n\nJika Anda ingin segera memperbaruinya, Anda dapat menggunakan perintah /admincache, yang akan memaksa {dispatcher.bot.first_name} untuk memeriksa lagi siapa adminnya dan izinnya"
+            f"\n\nJika Anda mendapatkan pesan yang mengatakan::"
+            f"\n<Code>Anda harus menjadi administrator obrolan ini untuk melakukan tindakan ini!</code>"
+            f"\nMaaf {dispatcher.bot.first_name} tidak punya wewenang; Apakah anda memiliki hak admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
             f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
