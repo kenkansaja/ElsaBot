@@ -164,7 +164,7 @@ GDMORNING = [
     "`Matahari terbit adalah yang terbaik; nikmati secangkir kopi atau teh bersama diri sendiri karena hari ini milikmu, selamat pagi! Semoga harimu menyenangkan.`",
     "`Hari yang buruk akan selalu memiliki pagi yang baik, semoga semua kekhawatiran Anda hilang dan semua yang Anda inginkan dapat menemukan tempat. Selamat pagi!`",
     "`Akhir yang hebat mungkin tidak ditentukan, tetapi awal kreatif yang baik dapat direncanakan dan dicapai. Selamat pagi, semoga harimu produktif!`",
-    "`Memiliki pagi yang manis, secangkir kopi, hari bersama orang yang Anda cintai adalah apa yang membuat "Selamat Pagi" Anda semoga hari Anda menyenangkan!`",
+    "`Memiliki pagi yang manis, secangkir kopi, hari bersama orang yang Anda cintai adalah apa yang membuat "GDMORNING" Anda semoga hari Anda menyenangkan!`",
     "`Apa pun bisa salah di hari itu tetapi pagi harus indah, jadi saya pastikan pagi Anda dimulai dengan indah. Selamat pagi!`",
     "`Buka matamu dengan senyuman, berdoa dan bersyukurlah bahwa kamu bangun untuk awal yang baru. Selamat pagi!`",
     "`Pagi bukan hanya matahari terbit tapi Keajaiban Tuhan Yang Indah yang mengalahkan kegelapan dan menebarkan cahaya. Selamat Pagi.`",
