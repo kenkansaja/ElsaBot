@@ -691,7 +691,7 @@ BEING_LOGICAL = (
     "Jika Anda membeli penghapus, Anda benar-benar membayar kesalahan Anda.",
     "manusia menjajah bulan, itu mungkin akan menarik rumah jompo karena gravitasi yang lebih lemah akan membuat orang tua merasa lebih kuat.",
     "Orang yang paling Anda sayangi memiliki potensi paling besar untuk menghancurkan Anda.",
-    "Setiap video dengan judul "tunggu" terlalu panjang.",
+    "Any video with “wait for it” in the title is simply too long.",
     "Usia Anda dalam tahun adalah berapa kali Anda mengelilingi Matahari, tetapi usia Anda dalam bulan adalah berapa kali Bulan mengelilingi Anda.",
     "Menggigit lidah saat makan adalah contoh sempurna bagaimana Anda masih bisa mengacau, bahkan dengan pengalaman puluhan tahun.",
     "Mengatakan bahwa rumah Anda ditenagai oleh reaktor fusi Nuklir nirkabel yang berjarak 93 Juta mil jauhnya terdengar jauh lebih keren daripada hanya mengatakan Anda memiliki panel surya di atap Anda.",
