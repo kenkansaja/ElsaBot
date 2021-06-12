@@ -451,7 +451,7 @@ SLAP_TEMPLATES = (
     "( _・)ノΞ●~* {user2},Shinaeeee!!.",
     "( ・∀・)ｒ鹵~<≪巛;ﾟДﾟ)ﾉ\n*Semburan serangga {user2}*.",
     "( )ﾉ占~<巛巛巛.\n-{user2} Kamu mengganggu!",
-    "( -´)づ︻╦̵̵̿╤── \(˚☐˚")/ {pengguna2}.",
+    "( -´)づ︻╦̵̵̿╤── \(˚☐˚")/ {user2}.",
     "{user1} {hits} {user2} dengan {item}.",
     "{user1} {hits} {user2} berhadapan dengan {item}.",
     "{user1} {hits} {user2} sedikit dengan {item}.",
