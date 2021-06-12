@@ -701,7 +701,7 @@ BEING_LOGICAL = (
     "Bangun di pagi hari terkadang terasa seperti melanjutkan film buruk yang Anda putuskan untuk berhenti menonton.",
     "Jika semuanya berjalan lancar, Anda mungkin tidak akan ingat hari ini.",
     "Ketika Anda bertemu orang baru dalam kehidupan nyata, Anda membuka lebih banyak karakter untuk dunia impian Anda.",
-    "Mungkin jika mereka mengganti nama tabir surya menjadi "krim anti-kanker" lebih banyak orang akan memakainya.",
+    "Mungkin jika mereka mengganti nama tabir surya menjadi “anti-cancer cream” lebih banyak orang akan memakainya.",
     "200 tahun yang lalu, orang tidak akan pernah menduga bahwa manusia di masa depan akan berkomunikasi dengan mengetuk kaca secara diam-diam.",
     "Orang tua khawatir tentang apa yang diunduh putra mereka dan khawatir tentang apa yang diunggah putri mereka.",
     "Sungguh gila bagaimana Anda bisa seusia dengan seseorang, tetapi pada tahap yang sama sekali berbeda dalam hidup Anda.",
