@@ -491,17 +491,17 @@ def goodmorning(update, context):
 
 
 __help__ = """
-*Some dank memes for fun or whatever!*
- ✪ /sanitize*:* Sanitize Your Self
- ✪ /shrug or /cri*:* Get shrug or ToT.
- ✪ /decide*:* Randomly answer yes no etc.
- ✪ /abuse*:* Abuses the retard!
- ✪ /table*:* Flips a table...
- ✪ runs*:* Reply a random string from an array of replies.
- ✪ /slap*:* Slap a user, or get slapped if not a reply.
- ✪ /pasta*:* Famous copypasta meme, try and see.
- ✪ /clap*:* Claps on someones message!
- ✪ /owo*:* UwU-fy whole text XD.
+*Beberapa meme untuk bersenang-senang atau apa pun itu!*
+ ✪ /sanitize*:* Bersihkan diri anda
+ ✪ /shrug or /cri*:* Dapatkan emote teks shrug atau ToT.
+ ✪ /decide*:* Jawab secara acak ya tidak dll.
+ ✪ /abuse*:* Menyalah gunakan retard!
+ ✪ /table*:* Membalik meja...
+ ✪ runs*:* Membalas secara acak dari larik balasan yang tersimpan di sistem.
+ ✪ /slap*:* Menampar pengguna, atau ditampar jika tidak dibalas.
+ ✪ /pasta*:* Meme copypasta yang terkenal, coba dan lihat.
+ ✪ /clap*:* Tepuk tangan pada pesan seseorang!
+ ✪ /owo*:* UwU-fy seluruh teks XD.
  ✪ /roll*:* Rolls a dice	
  ✪ /recite*:* Logical quotes to change your life.
  ✪ /stretch*:*  streeeeeeetch iiiiiiit.
