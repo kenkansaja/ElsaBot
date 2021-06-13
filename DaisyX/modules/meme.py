@@ -502,30 +502,30 @@ __help__ = """
  ✪ /pasta*:* Meme copypasta yang terkenal, coba dan lihat.
  ✪ /clap*:* Tepuk tangan pada pesan seseorang!
  ✪ /owo*:* UwU-fy seluruh teks XD.
- ✪ /roll*:* Rolls a dice	
- ✪ /recite*:* Logical quotes to change your life.
+ ✪ /roll*:* Melemparkan dadu.	
+ ✪ /recite*:* Kutipan logis untuk mengubah hidup Anda.
  ✪ /stretch*:*  streeeeeeetch iiiiiiit.
- ✪ /hug*:* Hug a user warmly, or get hugged if not a reply.
- ✪ /pat*:* pats a user, or get patted
- ✪ /shout*:* write anything you want to give loud shoute
- ✪ /plet <text>*:* make ur text sticker in different colours
+ ✪ /hug*:* Peluk pengguna dengan hangat, atau peluk jika bukan balasan.
+ ✪ /pat*:* menepuk pengguna, atau ditepuk
+ ✪ /shout*:* tulis apa saja yang ingin kamu teriakkan
+ ✪ /plet <text>*:* buat stiker teksmu dengan warna berbeda
  
- ✪ /truth or /dare*:* Send random truth or dare.
+ ✪ /truth or /dare*:* Kirim kebenaran atau tantangan acak.
 
 *Memes*
-✪ /hitler*:* Quote a message and type this command to make a caption of hitler
-✪ /mock*:* Does the same as /hitler but spongemock instead
-✪ /kim*:* Does the same as /hitler but with Kim Jong Un instead (O no plox dont bomb my house)
-✪ /rmeme*:* Sends random meme scraped from reddit
+✪ /hitler*:* Kutip pesan dan ketik perintah ini untuk membuat keterangan hitler
+✪ /mock*:* Sama dengan /hitler tetapi sebagai gantinya spongemock
+✪ /kim*:* Sama dengan /hitler tetapi dengan Kim Jong Un sebagai gantinya
+✪ /rmeme*:* Mengirimkan meme acak yang diambil dari reddit
 *Regex based memes:*
 
-✪ /decide can be also used with regex like: `Liza? <question>: randomly answer "Yes, No" etc.`
+✪ /decide dapat juga digunakan dengan regex seperti: `Liza? <pertanyaan>: jawab secara acak "Ya, Tidak" dll.`
 
-Some other regex filters are:
-`goodmorning`, `good morning` or `goodnight`, `good night`.
+Beberapa filter regex lainnya adalah:
+`selamat pagi`, `selamat pagi` atau `selamat malam`, `selamat malam`.
 
-Suzuya will reply random strings accordingly when these words are used!
-All regex filters can be disabled incase u don't want... like: `/disable goodnight`.
+Suzuya akan membalas string acak yang sesuai ketika kata-kata ini digunakan!
+Semua filter regex dapat dinonaktifkan jika Anda tidak ingin... seperti: `/disable selamat malam`.
 
 """
 
