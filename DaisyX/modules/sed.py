@@ -5,8 +5,8 @@ import telegram
 from telegram import Update, Bot
 from telegram.ext import run_async
 
-from tg_bot import dispatcher, LOGGER
-from tg_bot.modules.disable import DisableAbleRegexHandler
+from DaisyX import dispatcher, LOGGER
+from DaisyX.modules.disable import DisableAbleRegexHandler
 
 DELIMITERS = ("/", ":", "|", "_")
 
@@ -108,7 +108,7 @@ Jika Anda ingin menggunakan karakter ini, pastikan Anda menghindarinya!
 misalnya:\\?.
 """.format(telegram.MAX_MESSAGE_LENGTH)
 
-__mod_name__ = "Sed/Regex"
+__mod_name__ = "😊SED/REGEX"
 
 
 SED_HANDLER = DisableAbleRegexHandler(r's([{}]).*?\1.*'.format("".join(DELIMITERS)), sed, friendly="sed")
