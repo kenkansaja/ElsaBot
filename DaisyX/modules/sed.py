@@ -5,7 +5,7 @@ import telegram
 from telegram import Update, Bot
 from telegram.ext import run_async
 
-from DaisyX import sample_config, LOGGER
+from DaisyX import dispatcher, LOGGER
 from DaisyX.modules.disable import DisableAbleRegexHandler
 
 DELIMITERS = ("/", ":", "|", "_")
