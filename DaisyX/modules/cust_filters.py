@@ -72,7 +72,7 @@ def list_handlers(update, context):
 
     if not all_handlers:
         send_message(
-            update.effective_message, "No filters saved in {}!".format(chat_name)
+            update.effective_message, "Tidak ada filter yang disimpan di {}!".format(chat_name)
         )
         return
 
@@ -120,7 +120,7 @@ def filters(update, context):
     if not msg.reply_to_message and len(args) < 2:
         send_message(
             update.effective_message,
-            "Please provide keyboard keyword for this filter to reply with!",
+            "Harap berikan kata kunci keyboard untuk filter ini untuk membalas!",
         )
         return
 
@@ -128,7 +128,7 @@ def filters(update, context):
         if len(args) < 2:
             send_message(
                 update.effective_message,
-                "Please provide keyword for this filter to reply with!",
+                "Harap berikan kata kunci untuk filter ini untuk membalas!",
             )
             return
         else:
@@ -158,7 +158,7 @@ def filters(update, context):
         if not text:
             send_message(
                 update.effective_message,
-                "There is no note message - You can't JUST have buttons, you need a message to go with it!",
+                "Tidak ada pesan catatan - Anda tidak bisa HANYA memiliki tombol, Anda perlu pesan untuk menggunakannya!",
             )
             return
 
@@ -180,7 +180,7 @@ def filters(update, context):
     elif not text and not file_type:
         send_message(
             update.effective_message,
-            "Please provide keyword for this filter reply with!",
+            "Harap berikan kata kunci untuk balasan filter ini!",
         )
         return
 
@@ -201,7 +201,7 @@ def filters(update, context):
         if (msg.reply_to_message.text or msg.reply_to_message.caption) and not text:
             send_message(
                 update.effective_message,
-                "There is no note message - You can't JUST have buttons, you need a message to go with it!",
+                "Tidak ada pesan catatan - Anda tidak bisa HANYA memiliki tombol, Anda perlu pesan untuk menggunakannya!",
             )
             return
 
@@ -242,13 +242,13 @@ def stop_filter(update, context):
             chat_name = chat.title
 
     if len(args) < 2:
-        send_message(update.effective_message, "What should i stop?")
+        send_message(update.effective_message, "Apa yang harus saya hentikan?")
         return
 
     chat_filters = sql.get_chat_triggers(chat_id)
 
     if not chat_filters:
-        send_message(update.effective_message, "No filters active here!")
+        send_message(update.effective_message, "Tidak ada filter yang aktif di sini!")
         return
 
     for keyword in chat_filters:
@@ -256,14 +256,14 @@ def stop_filter(update, context):
             sql.remove_filter(chat_id, args[1])
             send_message(
                 update.effective_message,
-                "Okay, I'll stop replying to that filter in *{}*.".format(chat_name),
+                "Oke, saya akan berhenti membalas filter itu di *{}*.".format(chat_name),
                 parse_mode=telegram.ParseMode.MARKDOWN,
             )
             raise DispatcherHandlerStop
 
     send_message(
         update.effective_message,
-        "That's not a filter - Click: /filters to get currently active filters.",
+        "Itu bukan filter - Klik: /filters untuk mendapatkan filter yang sedang aktif.",
     )
 
 
@@ -324,7 +324,7 @@ def reply_filter(update, context):
                             ):
                                 context.bot.send_message(
                                     chat.id,
-                                    "Message couldn't be sent, Is the sticker id valid?",
+                                    "Pesan tidak bisa terkirim, apakah stiker id valid?",
                                 )
                                 return
                             else:
@@ -417,7 +417,7 @@ def reply_filter(update, context):
                     except BadRequest:
                         send_message(
                             message,
-                            "I don't have the permission to send the content of the filter.",
+                            "Saya tidak memiliki izin untuk mengirim konten filter.",
                         )
                 break
             else:
@@ -451,13 +451,13 @@ def reply_filter(update, context):
                             try:
                                 send_message(
                                     update.effective_message,
-                                    "You seem to be trying to use an unsupported url protocol. "
-                                    "Telegram doesn't support buttons for some protocols, such as tg://. Please try "
-                                    "again...",
+                                    "Sepertinya Anda mencoba menggunakan protokol url yang tidak didukung."
+                                    "Telegram tidak mendukung tombol untuk beberapa protokol, seperti tg://. Silakan coba"      
+                                    "Lagi...",
                                 )
                             except BadRequest as excp:
                                 LOGGER.exception("Error in filters: " + excp.message)
-                        elif excp.message == "Reply message not found":
+                        elif excp.message == "Pesan balasan tidak ditemukan":
                             try:
                                 context.bot.send_message(
                                     chat.id,
@@ -472,15 +472,15 @@ def reply_filter(update, context):
                             try:
                                 send_message(
                                     update.effective_message,
-                                    "This message couldn't be sent as it's incorrectly formatted.",
+                                    "Pesan ini tidak dapat dikirim karena formatnya salah.",
                                 )
                             except BadRequest as excp:
                                 LOGGER.exception("Error in filters: " + excp.message)
                             LOGGER.warning(
-                                "Message %s could not be parsed", str(filt.reply)
+                                "Pesan %s tidak dapat diuraikan", str(filt.reply)
                             )
                             LOGGER.exception(
-                                "Could not parse filter %s in chat %s",
+                                "Tidak dapat mengurai filter %s dalam obrolan %s",
                                 str(filt.keyword),
                                 str(chat.id),
                             )
@@ -490,7 +490,7 @@ def reply_filter(update, context):
                     try:
                         send_message(update.effective_message, filt.reply)
                     except BadRequest as excp:
-                        LOGGER.exception("Error in filters: " + excp.message)
+                        LOGGER.exception("Kesalahan dalam filters: " + excp.message)
                 break
 
 
@@ -501,21 +501,21 @@ def rmall_filters(update, context):
     member = chat.get_member(user.id)
     if member.status != "creator" and user.id not in DRAGONS:
         update.effective_message.reply_text(
-            "Only the chat owner can clear all notes at once."
+            "Hanya pemilik obrolan yang dapat menghapus semua catatan sekaligus."
         )
     else:
         buttons = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="Stop all filters", callback_data="filters_rmall"
+                        text="Hentikan semua filter", callback_data="filters_rmall"
                     )
                 ],
                 [InlineKeyboardButton(text="Cancel", callback_data="filters_cancel")],
             ]
         )
         update.effective_message.reply_text(
-            f"Are you sure you would like to stop ALL filters in {chat.title}? This action cannot be undone.",
+            f"Apakah Anda yakin ingin menghentikan SEMUA filter di {chat.title}? Tindakan ini tidak dapat dibatalkan.",
             reply_markup=buttons,
             parse_mode=ParseMode.MARKDOWN,
         )
@@ -531,7 +531,7 @@ def rmall_callback(update, context):
         if member.status == "creator" or query.from_user.id in DRAGONS:
             allfilters = sql.get_chat_triggers(chat.id)
             if not allfilters:
-                msg.edit_text("No filters in this chat, nothing to stop!")
+                msg.edit_text("Tidak ada filter dalam obrolan ini, tidak ada yang berhenti!")
                 return
 
             count = 0
@@ -543,35 +543,35 @@ def rmall_callback(update, context):
             for i in filterlist:
                 sql.remove_filter(chat.id, i)
 
-            msg.edit_text(f"Cleaned {count} filters in {chat.title}")
+            msg.edit_text(f"Membersihkan {count} filters di {chat.title}")
 
         if member.status == "administrator":
-            query.answer("Only owner of the chat can do this.")
+            query.answer("Hanya pemilik obrolan yang dapat melakukan ini.")
 
         if member.status == "member":
-            query.answer("You need to be admin to do this.")
+            query.answer("Anda harus menjadi admin untuk melakukan ini.")
     elif query.data == "filters_cancel":
         if member.status == "creator" or query.from_user.id in DRAGONS:
-            msg.edit_text("Clearing of all filters has been cancelled.")
+            msg.edit_text("Pembersihan semua filter telah dibatalkan.")
             return
         if member.status == "administrator":
-            query.answer("Only owner of the chat can do this.")
+            query.answer("Hanya pemilik obrolan yang dapat melakukan ini.")
         if member.status == "member":
-            query.answer("You need to be admin to do this.")
+            query.answer("Anda harus menjadi admin untuk melakukan ini.")
 
 
 # NOT ASYNC NOT A HANDLER
 def get_exception(excp, filt, chat):
-    if excp.message == "Unsupported url protocol":
-        return "You seem to be trying to use the URL protocol which is not supported. Telegram does not support key for multiple protocols, such as tg: //. Please try again!"
-    elif excp.message == "Reply message not found":
+    if excp.message == "Protokol url tidak didukung":
+        return "Sepertinya Anda mencoba menggunakan protokol URL yang tidak didukung. Telegram tidak mendukung kunci untuk beberapa protokol, seperti tg: //. Silakan coba lagi!"
+    elif excp.message == "Pesan balasan tidak ditemukan.":
         return "noreply"
     else:
-        LOGGER.warning("Message %s could not be parsed", str(filt.reply))
+        LOGGER.warning("Pesan %s tidak dapat diuraikan", str(filt.reply))
         LOGGER.exception(
-            "Could not parse filter %s in chat %s", str(filt.keyword), str(chat.id)
+            "Tidak dapat mengurai filter %s dalam obrolan %s"", str(filt.keyword), str(chat.id)
         )
-        return "This data could not be sent because it is incorrectly formatted."
+        return "Pesan ini tidak dapat dikirim karena formatnya salah."
 
 
 # NOT ASYNC NOT A HANDLER
@@ -579,7 +579,7 @@ def addnew_filter(update, chat_id, keyword, text, file_type, file_id, buttons):
     msg = update.effective_message
     totalfilt = sql.get_chat_triggers(chat_id)
     if len(totalfilt) >= 150:  # Idk why i made this like function....
-        msg.reply_text("This group has reached its max filters limit of 150.")
+        msg.reply_text("Grup ini telah mencapai batas filter maksimal 150.")
         return False
     else:
         sql.new_add_filter(chat_id, keyword, text, file_type, file_id, buttons)
