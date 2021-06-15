@@ -144,17 +144,13 @@ def list_chatbot_chats(update: Update, context: CallbackContext):
 
 
 __help__ = f"""
-Chatbot utilizes the CoffeeHouse API and allows Senku to talk and provides a more interactive group chat experience.
+Chatbot menggunakan API CoffeeHouse dan memungkinkan Senku untuk berbicara dan memberikan pengalaman obrolan grup yang lebih interaktif.
 
-*Commands:* 
-*Admins only:*
- ✪ `/addchat`*:* Enables Chatbot mode in the chat.
- ✪ `/rmchat`*:* Disables Chatbot mode in the chat.
-
-Reports bugs at @{SUPPORT_CHAT}
-[Powered by CoffeeHouse](https://coffeehouse.intellivoid.net) from @Intellivoid
+*Perintah:* 
+*Hanya Admin :*
+ `/addchat`*:* Mengaktifkan mode Chatbot dalam obrolan.
+ `/rmchat`*:* Menonaktifkan mode Chatbot dalam obrolan.
 """
-
 ADD_CHAT_HANDLER = CommandHandler("addchat", add_chat)
 REMOVE_CHAT_HANDLER = CommandHandler("rmchat", remove_chat)
 CHATBOT_HANDLER = MessageHandler(
