@@ -595,19 +595,16 @@ def selfunban(context: CallbackContext, update: Update) -> str:
 
 __help__ = """
 *Kicks:*
- ✪ /kick <userhandle>*:* Kicks a user out of the group, (via handle, or reply)
- ✪ /skick <userhandle>*:* Silently kicks a user out of the group, (via handle, or reply)
- ✪ /kickme*:* Kicks the user who used the command.
+/kick <userhandle>*:* Mengeluarkan pengguna dari grup, (melalui handle, atau membalas)
+/skick <userhandle>*:* Diam-diam mengeluarkan pengguna dari grup, (melalui handle, atau reply)
+/kickme*:* Menendang pengguna yang menggunakan perintah.
  
 *Bans:*
- ✪ /ban <userhandle>*:* Bans a user. (via handle, or reply)
- ✪ /sban <userhandle>*:* Silently bans a user without leaving any message. (via handle, or reply)
- ✪ /tban <userhandle> x(m/h/d)*:* Bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- ✪ /stban <userhandle> x(m/h/d)*:* Silently bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- ✪ /unban <userhandle>*:* Unbans a user. (via handle, or reply)
-
-_NOTE:_
- If you set Log Channels, you will get logs of Silent kick and bans. Check *Logger* module to know more about Log Channel.
+/ban <userhandle>*:* Mencekal pengguna. (melalui pegangan, atau balasan)
+/sban <userhandle>*:* Diam-diam melarang pengguna tanpa meninggalkan pesan apa pun. (melalui pegangan, atau balasan)
+/tban <userhandle> x(m/h/d)*:* Memblokir pengguna untuk waktu `x`. (melalui pegangan, atau balasan). `m` = `menit`, `h` = `jam`, `h` = `hari`.
+/stban <userhandle> x(m/h/d)*:* Memblokir pengguna secara diam-diam selama `x`. (melalui pegangan, atau balasan). `m` = `menit`, `h` = `jam`, `h` = `hari`.
+/unban <userhandle>*:* Membatalkan larangan pengguna. (melalui pegangan, atau balasan)
 """
 
 BAN_HANDLER = CommandHandler("ban", ban)
