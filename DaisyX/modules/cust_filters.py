@@ -569,7 +569,7 @@ def get_exception(excp, filt, chat):
     else:
         LOGGER.warning("Pesan %s tidak dapat diuraikan", str(filt.reply))
         LOGGER.exception(
-            "Tidak dapat mengurai filter %s dalam obrolan %s"", str(filt.keyword), str(chat.id)
+            "Tidak dapat mengurai filter %s dalam obrolan %s", str(filt.keyword), str(chat.id)
         )
         return "Pesan ini tidak dapat dikirim karena formatnya salah."
 
