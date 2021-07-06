@@ -45,7 +45,7 @@ async def get_chatinfo(event):
     return chat_info
 
 
-@register(outgoing=True, pattern='^/inviteall(?: |$)(.*)')
+@register(outgoing=True, pattern=f"^[!/]inviteall ?(.*)")
 async def get_users(event):
     sender = await event.get_sender()
     me = await event.client.get_me()
