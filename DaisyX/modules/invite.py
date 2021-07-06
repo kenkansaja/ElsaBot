@@ -7,7 +7,7 @@ from telethon.errors import (
 from telethon.tl.functions.channels import GetFullChannelRequest
 
 from DaisyX.events import register
-from DaisyX import CMD_HELP
+
 
 
 async def get_chatinfo(event):
