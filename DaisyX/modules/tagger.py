@@ -15,7 +15,7 @@ async def _(event):
     mentions = "Hai Teman Saya Elsa, Saya Panggil Kalian Semua"
     chat = await event.get_input_chat()
     async for x in telethn.iter_participants(chat, 1000):
-        mentions + f" \n [{x.first_name}](tg://user?id={x.id})"
+        mentions + = f" \n [{x.first_name}](tg://user?id={x.id})"
     await event.reply(mentions)
     await event.delete()
 
