@@ -37,7 +37,7 @@ async def _(event):
     await event.delete()
 
 @cutiepii(pattern="^/all ?(.*)")
-async def_(event):
+async def _(event):
     await event.get_reply_message("`Processing.....`")
     sh = get_text(message)
     if not sh:
