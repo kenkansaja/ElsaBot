@@ -14,8 +14,8 @@ async def _(event):
         return
     mentions = "Hai Teman Saya Elsa, Saya Panggil Kalian Semua"
     chat = await event.get_input_chat()
-    async for x in telethn.iter_participants(chat, 100):
-        mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
+    async for x in telethn.iter_participants(chat, 1000):
+        mentions + f" \n [{x.first_name}](tg://user?id={x.id})"
     await event.reply(mentions)
     await event.delete()
 
@@ -36,24 +36,8 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-@cutiepii(pattern="^/all ?(.*)")
-async def _(event):
-    await event.get_reply_message("`Processing.....`")
-    sh = get_text(message)
-    if not sh:
-        sh = "Hi!"
-    mentions = ""
-    async for x in telethn.iter_participants(chat, 100):
-        mentions += x.user.mention + " "
-    n = 4096
-    kk = [mentions[i : i + n] for i in range(0, len(mentions), n)]
-    for i in kk:
-        j = f"<b>{sh}</b> \n{i}"
-        await event.send_message(message.chat.id, j, parse_mode="html")
-
 
 __mod_name__ = "Tagger 🖇"
 __help__ = """
   ➢ `/tagall : Tag everyone in a chat
-  ➢ `/all : Tag everyone in a chat
 """
